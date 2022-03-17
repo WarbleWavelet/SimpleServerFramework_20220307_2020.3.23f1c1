@@ -20,11 +20,22 @@ public class ProtocolMgr
             Debug.Log("获取密钥：" + ((MsgSecret)resmsg).Srcret);
         });
     }
-
+    /// <summary>长点测试分包</summary>
     public static void SocketTest() 
     {
         MsgTest msg = new MsgTest();
-        msg.ReqContent = "Ocean";
+        string longStr = "" +
+            "jkdfjjkdjkdchjl,dchcjkqasdfghukasdhukasdgasyjdgaskdhaskdfgasjdgashjkdgjasdjasdklazxjckl.claskl/djl;askd;s" +
+            "jkdfjjkdjkdchjl,dchcjkqasdfghukasdhukasdgasyjdgaskdhaskdfgasjdgashjkdgjasdjasdklazxjckl.claskl/djl;askd;s" +
+            "jkdfjjkdjkdchjl,dchcjkqasdfghukasdhukasdgasyjdgaskdhaskdfgasjdgashjkdgjasdjasdklazxjckl.claskl/djl;askd;s" +
+            "jkdfjjkdjkdchjl,dchcjkqasdfghukasdhukasdgasyjdgaskdhaskdfgasjdgashjkdgjasdjasdklazxjckl.claskl/djl;askd;s" +
+            "jkdfjjkdjkdchjl,dchcjkqasdfghukasdhukasdgasyjdgaskdhaskdfgasjdgashjkdgjasdjasdklazxjckl.claskl/djl;askd;s" +
+            "jkdfjjkdjkdchjl,dchcjkqasdfghukasdhukasdgasyjdgaskdhaskdfgasjdgashjkdgjasdjasdklazxjckl.claskl/djl;askd;s" +
+            "jkdfjjkdjkdchjl,dchcjkqasdfghukasdhukasdgasyjdgaskdhaskdfgasjdgashjkdgjasdjasdklazxjckl.claskl/djl;askd;s" +
+            "jkdfjjkdjkdchjl,dchcjkqasdfghukasdhukasdgasyjdgaskdhaskdfgasjdgashjkdgjasdjasdklazxjckl.claskl/djl;askd;s" 
+           ;
+        string shorttr = "Ocean";
+        msg.ReqContent = longStr;
         NetManager.Instance.SendMsg(msg);
         NetManager.Instance.AddProtoListener(ProtocolEnum.MsgTest, (resmsg) =>
         {

@@ -12,7 +12,7 @@ public class GameStart : MonoBehaviour
     #region 生命
     void Start()
     {
-        NetManager.Instance.Connect( ip_Address, ip_Port);
+        NetManager.Instance.Connect(ip_Address, ip_Port);
         StartCoroutine(NetManager.Instance.CheckNet());
     }
 
@@ -20,8 +20,9 @@ public class GameStart : MonoBehaviour
     void Update()
     {
         NetManager.Instance.Update();
+        TestFenBao();
     }
-   
+
     private void OnApplicationQuit()
     {
         NetManager.Instance.Close();
@@ -29,7 +30,8 @@ public class GameStart : MonoBehaviour
     #endregion
 
     #region 辅助2
-    private void Update_A()
+    /// <summary>测试分包</summary>
+    void TestFenBao()
     {
         if (Input.GetKeyDown(KeyCode.A))
         {
@@ -38,6 +40,10 @@ public class GameStart : MonoBehaviour
                 ProtocolMgr.SocketTest();
             }
         }
+    }
+    private void Update_A()
+    {
+
 
         if (Input.GetKeyDown(KeyCode.S))
         {

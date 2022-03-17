@@ -231,7 +231,7 @@ namespace SimServer.Net
             }
 
             readBuff.WriteIdx += count;
-            //解析我们的信息
+            
             OnReceiveData(clientSocket);
             readBuff.CheckAndMoveBytes();
         }
@@ -278,6 +278,7 @@ namespace SimServer.Net
             {
                 return false;
             }
+            //
             int readIdx = readbuff.ReadIdx;
             byte[] bytes = readbuff.Bytes;
             bodyLength = BitConverter.ToInt32(bytes, readIdx);
@@ -287,7 +288,7 @@ namespace SimServer.Net
             {
                 return false;
             }
-
+            //
             return true;
         }
         /// <summary>解析协议名</summary>
@@ -385,7 +386,7 @@ namespace SimServer.Net
             }
         }
         /// <summary>
-        /// 接收数据处理
+        /// 解析、接收数据处理
         /// </summary>
         /// 121<param name="clientSocket">客户端socket</param>
         void OnReceiveData(ClientSocket clientSocket)

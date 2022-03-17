@@ -33,12 +33,12 @@ namespace SimServer.Net
             MsgPing msPong = new MsgPing();
             ServerSocket.Send(c, msPong);
         }
-
+        /// <summary>测试分包</summary>
         public static void MsgTest(ClientSocket c, MsgBase msgBase)
         {
             MsgTest msgTest = (MsgTest)msgBase;
             Debug.Log(msgTest.ReqContent);
-            msgTest.RecContent = "服务器发送的数据";
+            msgTest.RecContent = "服务器发送的数据";//返回值
             ServerSocket.Send(c, msgTest);
             //ServerSocket.Send(c, msgTest);
             //ServerSocket.Send(c, msgTest);

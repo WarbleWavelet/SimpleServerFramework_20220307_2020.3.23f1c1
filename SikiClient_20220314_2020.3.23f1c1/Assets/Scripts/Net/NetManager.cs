@@ -506,17 +506,8 @@ public class NetManager : Singleton<NetManager>
             if (m_MsgList.Count <= 0) //没有消息
                 continue;
             //
-            //GetMsgBase(m_MsgList, out MsgBase msgBase);
-            MsgBase msgBase = null;
-            lock (m_MsgList)
-            {
-                if (m_MsgList.Count > 0)
-                {
-                    msgBase = m_MsgList[0];
-                    m_MsgList.RemoveAt(0);
-                }
-            }
-            //
+            GetMsgBase(m_MsgList, out MsgBase msgBase);
+
 
             if (msgBase != null)
             {
