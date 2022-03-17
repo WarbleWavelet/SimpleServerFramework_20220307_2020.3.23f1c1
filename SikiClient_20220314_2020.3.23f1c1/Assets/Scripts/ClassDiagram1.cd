@@ -1,0 +1,123 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<ClassDiagram MajorVersion="1" MinorVersion="1">
+  <Class Name="GameStart" Collapsed="true">
+    <Position X="11.5" Y="3.25" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAQAABAAACAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Assets\Scripts\GameStart.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="MsgSecret" Collapsed="true">
+    <Position X="3.5" Y="1.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAABAAAAAAAAAAAAAAAAQAAAAAAAAA=</HashCode>
+      <FileName>Assets\Scripts\Net\Proto\SysMsg.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="MsgPing" Collapsed="true">
+    <Position X="8" Y="1.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAQAAAAAAAAA=</HashCode>
+      <FileName>Assets\Scripts\Net\Proto\SysMsg.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="MsgTest" Collapsed="true">
+    <Position X="12.5" Y="1.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAQAAAAAAQAAAAAAAAA=</HashCode>
+      <FileName>Assets\Scripts\Net\Proto\SysMsg.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="ByteArray" Collapsed="true">
+    <Position X="8" Y="3.25" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAgAAAAAAAAAAAAAQBCACIAAAQAABAIAEEAAAA=</HashCode>
+      <FileName>Assets\Scripts\Net\ByteArray.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="NetManager" Collapsed="true">
+    <Position X="3.25" Y="4.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>DJRADAFJABQAABAADKAAC4QTAiBAhEEAAMgCAQGkwIg=</HashCode>
+      <FileName>Assets\Scripts\Net\NetManager.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="ProtocolMgr" Collapsed="true">
+    <Position X="9.75" Y="3.25" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAgAAAAEAAAAAAAAAAAABAAAAAAAQAAAAAAA=</HashCode>
+      <FileName>Assets\Scripts\Net\ProtocolMgr.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="MsgBase" Collapsed="true">
+    <Position X="8" Y="0.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AABAAAAAAEAAAAAAAAAAAAAAAAAAAAAAAQEAQAAAAAA=</HashCode>
+      <FileName>Assets\Scripts\Net\Proto\MsgBase.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="MsgRegister" Collapsed="true">
+    <Position X="5.75" Y="1.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AACAAAAAAAAAAAAAAAAgAAQAAAAAAAACAQAAAAAAAEA=</HashCode>
+      <FileName>Assets\Scripts\Net\Proto\LoginMsg.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="MsgLogin" Collapsed="true">
+    <Position X="10.25" Y="1.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAIAQAAAAAAAACAQAAAAABAEA=</HashCode>
+      <FileName>Assets\Scripts\Net\Proto\LoginMsg.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Singleton&lt;T&gt;" Collapsed="true">
+    <Position X="3.25" Y="3.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>BAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAQAAAAAAAAAA=</HashCode>
+      <FileName>Assets\Scripts\Net\Base\Singleton.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="AES" Collapsed="true">
+    <Position X="6.25" Y="3.25" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAACAAAAQAAABAAAAAAAAAAAAEAAAAEIAAA=</HashCode>
+      <FileName>Assets\Scripts\Net\Base\AES.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Enum Name="ProtocolEnum" Collapsed="true">
+    <Position X="9.75" Y="4.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAABAAAAAAABAAAAAAAABAAAAAAAAIAAAAAAAgEAAAA=</HashCode>
+      <FileName>Assets\Scripts\Net\ProtocolEnum.cs</FileName>
+    </TypeIdentifier>
+  </Enum>
+  <Enum Name="RegisterType" Collapsed="true">
+    <Position X="8" Y="5.25" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAIQAAAAA=</HashCode>
+      <FileName>Assets\Scripts\Net\ServerEnum.cs</FileName>
+    </TypeIdentifier>
+  </Enum>
+  <Enum Name="LoginType" Collapsed="true">
+    <Position X="8" Y="4.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAACAAAAAAAAAAAAAAAAAAAAAAAAEAIQABAAA=</HashCode>
+      <FileName>Assets\Scripts\Net\ServerEnum.cs</FileName>
+    </TypeIdentifier>
+  </Enum>
+  <Enum Name="RegisterResult" Collapsed="true">
+    <Position X="6.25" Y="5.25" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAgAAAAAAAAAgAAAIAAABAAAAAAAAI=</HashCode>
+      <FileName>Assets\Scripts\Net\ServerEnum.cs</FileName>
+    </TypeIdentifier>
+  </Enum>
+  <Enum Name="LoginResult" Collapsed="true">
+    <Position X="6.25" Y="4.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAgAAAAAAAAAAAAAAgAAgAAAABAAACAAAAA=</HashCode>
+      <FileName>Assets\Scripts\Net\ServerEnum.cs</FileName>
+    </TypeIdentifier>
+  </Enum>
+  <Font Name="Microsoft YaHei UI" Size="9" />
+</ClassDiagram>

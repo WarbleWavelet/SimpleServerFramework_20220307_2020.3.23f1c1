@@ -1,0 +1,116 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<ClassDiagram MajorVersion="1" MinorVersion="1">
+  <Class Name="SimServer.Program" Collapsed="true">
+    <Position X="2.75" Y="5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAABAAAAAA=</HashCode>
+      <FileName>Program.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="MsgSecret" Collapsed="true">
+    <Position X="0.5" Y="1.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAABAAAAAAAAAAAAAAAAQAAAAAAAAA=</HashCode>
+      <FileName>Proto\MsgSecret.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="MsgPing" Collapsed="true">
+    <Position X="5" Y="1.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAQAAAAAAAAA=</HashCode>
+      <FileName>Proto\MsgPing.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="MsgBase" Collapsed="true">
+    <Position X="5" Y="0.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AQBAAAAAAEAAAAAAAAAAAAAAAAAAAAAAAQEAQAAAAAA=</HashCode>
+      <FileName>Proto\MsgBase.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="MsgRegister" Collapsed="true">
+    <Position X="2.75" Y="1.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AACAAAAAAAAAAAAAAAAgAAQAAAAAAAACAQAAAAAAAEA=</HashCode>
+      <FileName>Proto\LoginMsg.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="MsgLogin" Collapsed="true">
+    <Position X="7.25" Y="1.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAIAQAAAAAAAACAQAAAAABAEA=</HashCode>
+      <FileName>Proto\LoginMsg.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="SimServer.Net.ServerSocket" Collapsed="true">
+    <Position X="4.5" Y="5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>BIAQAAAggAAAAACABEgACCSAQAQAkAAAAAACAAEAAAg=</HashCode>
+      <FileName>Net\ServerSocket.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="SimServer.Net.MsgHandler" Collapsed="true">
+    <Position X="6.25" Y="4" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAABAAAAAAABAAAAAAAABAAAAAAAAIAAAAAAAgAAAAA=</HashCode>
+      <FileName>Net\MsgHandler.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="SimServer.Net.ClientSocket" Collapsed="true">
+    <Position X="4.5" Y="4" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAgAAAAAAQAAAACBAAAAAAA=</HashCode>
+      <FileName>Net\ClientSocket.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="SimServer.Net.ByteArray" Collapsed="true">
+    <Position X="2.75" Y="4" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAgAAAAAAAAAAAAAQBCACIAAAQAABAIAEEAAAA=</HashCode>
+      <FileName>Net\ByteArray.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="SimServer.Business.UserManager" Collapsed="true">
+    <Position X="6.25" Y="5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAABAAAAAAAQAAAAAAA=</HashCode>
+      <FileName>Business\UserManager.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Enum Name="ProtocolEnum" Collapsed="true">
+    <Position X="6.25" Y="6.25" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAABAAAAAAABAAAAAAAABAAAAAAAAIAAAAAAAgEAAAA=</HashCode>
+      <FileName>Proto\ProtocolEnum.cs</FileName>
+    </TypeIdentifier>
+  </Enum>
+  <Enum Name="RegisterType" Collapsed="true">
+    <Position X="4.5" Y="7" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAIQAAAAA=</HashCode>
+      <FileName>Business\ServerEnum.cs</FileName>
+    </TypeIdentifier>
+  </Enum>
+  <Enum Name="LoginType" Collapsed="true">
+    <Position X="4.5" Y="6.25" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAACAAAAAAAAAAAAAAAAAAAAAAAAEAIQABAAA=</HashCode>
+      <FileName>Business\ServerEnum.cs</FileName>
+    </TypeIdentifier>
+  </Enum>
+  <Enum Name="RegisterResult" Collapsed="true">
+    <Position X="2.75" Y="7" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAgAAAAAAAAAgAAAIAAABAAAAAAAAI=</HashCode>
+      <FileName>Business\ServerEnum.cs</FileName>
+    </TypeIdentifier>
+  </Enum>
+  <Enum Name="LoginResult" Collapsed="true">
+    <Position X="2.75" Y="6.25" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAgAAAAAAAAAAAAAAgAAgAAAABAAACAAAAA=</HashCode>
+      <FileName>Business\ServerEnum.cs</FileName>
+    </TypeIdentifier>
+  </Enum>
+  <Font Name="Microsoft YaHei UI" Size="9" />
+</ClassDiagram>
