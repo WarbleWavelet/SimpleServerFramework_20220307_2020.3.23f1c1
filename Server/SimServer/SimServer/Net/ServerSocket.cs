@@ -339,7 +339,7 @@ namespace SimServer.Net
 
             return true;
         }
-        /// <summary>继续读取数据</summary>
+        /// <summary>还有消息，继续读取数据</summary>
 
         void ContinueReceiveData(ClientSocket clientSocket, ByteArray readbuff)
         {

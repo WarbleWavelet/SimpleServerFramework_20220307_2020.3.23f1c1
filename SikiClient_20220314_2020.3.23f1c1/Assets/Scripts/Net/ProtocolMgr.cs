@@ -34,8 +34,8 @@ public class ProtocolMgr
             "jkdfjjkdjkdchjl,dchcjkqasdfghukasdhukasdgasyjdgaskdhaskdfgasjdgashjkdgjasdjasdklazxjckl.claskl/djl;askd;s" +
             "jkdfjjkdjkdchjl,dchcjkqasdfghukasdhukasdgasyjdgaskdhaskdfgasjdgashjkdgjasdjasdklazxjckl.claskl/djl;askd;s" 
            ;
-        string shorttr = "Ocean";
-        msg.ReqContent = longStr;
+        string shortStr = "Ocean";
+        msg.ReqContent = shortStr;
         NetManager.Instance.SendMsg(msg);
         NetManager.Instance.AddProtoListener(ProtocolEnum.MsgTest, (resmsg) =>
         {

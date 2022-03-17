@@ -551,6 +551,17 @@ public class NetManager : Singleton<NetManager>
                 list.RemoveAt(0);
             }
         }
+
+        //MsgBase msgBase = null;
+        //lock (m_MsgList)
+        //{
+        //    if (m_MsgList.Count > 0)
+        //    {
+        //        msgBase = m_MsgList[0];
+        //        m_MsgList.RemoveAt(0);
+        //    }
+        //}
+        //
     }
     void GetMsgBase(List<MsgBase> list,ref int count,out MsgBase msgBase)
     {
