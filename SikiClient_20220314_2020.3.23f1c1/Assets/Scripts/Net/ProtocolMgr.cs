@@ -44,7 +44,7 @@ public class ProtocolMgr
     }
 
     /// <summary>
-    /// 注册协议提交
+    /// 注册
     /// </summary>
     /// <param name="registerType"></param>
     /// <param name="userName"></param>
@@ -53,11 +53,13 @@ public class ProtocolMgr
     /// <param name="callback"></param>
     public static void Register(RegisterType registerType, string userName, string password, string code, Action<RegisterResult> callback) 
     {
+        Debug.Log("ProtocolMgr.Register"+ userName+"  "+ password);
         MsgRegister msg = new MsgRegister();
         msg.RegisterType = registerType;
         msg.Account = userName;
         msg.Password = password;
         msg.Code = code;
+        //
         NetManager.Instance.SendMsg(msg);
         NetManager.Instance.AddProtoListener(ProtocolEnum.MsgRegister, (resmsg) =>
         {
@@ -67,18 +69,19 @@ public class ProtocolMgr
     }
 
     /// <summary>
-    /// 登录协议的提交
+    /// 登录
     /// </summary>
-    /// <param name="loginType"></param>
+    /// <param name="loginType">登录方式</param>
     /// <param name="userName"></param>
     /// <param name="password"></param>
-    /// <param name="callback"></param>
+    /// <param name="callback">成功失败</param>
     public static void Login(LoginType loginType,string userName,string password, Action<LoginResult,string> callback) 
     {
         MsgLogin msg = new MsgLogin();
         msg.Account = userName;
         msg.Password = password;
         msg.LoginType = loginType;
+        //
         NetManager.Instance.SendMsg(msg);
         NetManager.Instance.AddProtoListener(ProtocolEnum.MsgLogin,(resmsg)=> 
         {

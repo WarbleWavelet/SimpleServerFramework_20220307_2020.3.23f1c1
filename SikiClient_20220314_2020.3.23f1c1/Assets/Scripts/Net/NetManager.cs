@@ -61,8 +61,8 @@ public class NetManager : Singleton<NetManager>
     public delegate void ProtoListener(MsgBase msg);
     private Dictionary<ProtocolEnum, ProtoListener> m_ProtoDic = new Dictionary<ProtocolEnum, ProtoListener>();
     /// <summary>掉线</summary>
-    private bool m_Diaoxian = false;
-    //是否链接成功过（只要链接成功过就是true，再也不会变成false）
+    private bool m_Dropline = false;
+    /// <summary>是否链接成功过（只要链接成功过就是true，再也不会变成false）</summary>
     private bool m_IsConnectSuccessed = false;
     private bool m_ReConnect = false;
 
@@ -88,15 +88,12 @@ public class NetManager : Singleton<NetManager>
             }
         }
     }
+
     /// <summary>放在Mono Update</summary>
     public void Update()
     {
-        if (m_Diaoxian && m_IsConnectSuccessed)
-        {
-            
-            ReConnect();
-            m_Diaoxian = false;
-        }
+        Case_DroplineReConnect();
+
 
         //断开链接后，链接服务器之后自动登录
         if (!string.IsNullOrEmpty(SecretKey) && m_Socket.Connected && m_ReConnect)
@@ -259,7 +256,7 @@ public class NetManager : Singleton<NetManager>
         SecretKey = "";//密钥为空
         m_Socket.Close();
         ExecuteEvent(NetEvent.Close, normal.ToString());
-        m_Diaoxian = true;
+        m_Dropline = true;
         //
         //关闭线程
         if (m_HeartThread != null && m_HeartThread.IsAlive)
@@ -344,6 +341,8 @@ public class NetManager : Singleton<NetManager>
         try
         {
             MsgBase2ByteArray(msgBase, out byte[] sendBytes);
+
+
             ByteArray ba = new ByteArray(sendBytes);
             int count = 0;
             //
@@ -700,6 +699,16 @@ public class NetManager : Singleton<NetManager>
             {
                 ExecuteProto(msgBase.ProtoType, msgBase);
             }
+        }
+    }
+    /// <summary>断线重连</summary>
+    void Case_DroplineReConnect()
+    {
+        if (m_Dropline && m_IsConnectSuccessed)
+        {
+
+            ReConnect();
+            m_Dropline = false;
         }
     }
     #endregion

@@ -12,7 +12,7 @@ namespace SimServer
     {
         static void Main(string[] args)
         {
-            //MySqlMgr.Instance.Init();
+            MySqlMgr.Instance.Init();
             ServerSocket.Instance.Init();
             Console.ReadLine();
         }

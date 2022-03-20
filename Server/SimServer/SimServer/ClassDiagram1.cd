@@ -24,7 +24,7 @@
   <Class Name="MsgBase" Collapsed="true">
     <Position X="5" Y="0.5" Width="1.5" />
     <TypeIdentifier>
-      <HashCode>AQBAAAAAAEAAAAAAAAAAAAAAAAAAAAAAAQEAQAAAAAA=</HashCode>
+      <HashCode>AQBAAAAAAEAAAAAAAAABgAAAAAAAAAAAAQEAQAAAAAA=</HashCode>
       <FileName>Proto\MsgBase.cs</FileName>
     </TypeIdentifier>
   </Class>
@@ -32,20 +32,20 @@
     <Position X="2.75" Y="1.75" Width="1.5" />
     <TypeIdentifier>
       <HashCode>AACAAAAAAAAAAAAAAAAgAAQAAAAAAAACAQAAAAAAAEA=</HashCode>
-      <FileName>Proto\LoginMsg.cs</FileName>
+      <FileName>Proto\MsgRegister.cs</FileName>
     </TypeIdentifier>
   </Class>
   <Class Name="MsgLogin" Collapsed="true">
     <Position X="7.25" Y="1.75" Width="1.5" />
     <TypeIdentifier>
       <HashCode>AAAAAAAAAAAAAAAAAAAAIAQAAAAAAAACAQAAAAABAEA=</HashCode>
-      <FileName>Proto\LoginMsg.cs</FileName>
+      <FileName>Proto\MsgLogin.cs</FileName>
     </TypeIdentifier>
   </Class>
   <Class Name="SimServer.Net.ServerSocket" Collapsed="true">
     <Position X="4.5" Y="5" Width="1.5" />
     <TypeIdentifier>
-      <HashCode>BIAQAAAggAAAAACABEgACCSAQAQAkAAAAAACAAEAAAg=</HashCode>
+      <HashCode>BIAQAAEggAAAAACABEwAAWQASAQMkAAAAkEKACFAAAg=</HashCode>
       <FileName>Net\ServerSocket.cs</FileName>
     </TypeIdentifier>
   </Class>
@@ -71,9 +71,9 @@
     </TypeIdentifier>
   </Class>
   <Class Name="SimServer.Business.UserManager" Collapsed="true">
-    <Position X="6.25" Y="5" Width="1.5" />
+    <Position X="9.25" Y="5" Width="1.5" />
     <TypeIdentifier>
-      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAABAAAAAAAQAAAAAAA=</HashCode>
+      <HashCode>AAAAAAAAAAAAAAAAAQAAAgAAAAABAAAAAAAQAAAAAAA=</HashCode>
       <FileName>Business\UserManager.cs</FileName>
     </TypeIdentifier>
   </Class>
@@ -94,7 +94,7 @@
   <Enum Name="LoginType" Collapsed="true">
     <Position X="4.5" Y="6.25" Width="1.5" />
     <TypeIdentifier>
-      <HashCode>AAAAAAAAACAAAAAAAAAAAAAAAAAAAAAAAAEAIQABAAA=</HashCode>
+      <HashCode>AAAAAAAAACAAAAAAAAAAAAAAAAAAAIAAAAEAIQABAAA=</HashCode>
       <FileName>Business\ServerEnum.cs</FileName>
     </TypeIdentifier>
   </Enum>

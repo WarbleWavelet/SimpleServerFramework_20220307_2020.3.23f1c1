@@ -17,6 +17,8 @@ namespace SimServer.Net
         /// <param name="msgBase"></param>
         public static void MsgSecret(ClientSocket c, MsgBase msgBase) 
         {
+            //TODO: MsgBase判空
+
             MsgSecret msgSecret = (MsgSecret)msgBase;
             msgSecret.Srcret = ServerSocket.SecretKey;
             ServerSocket.Send(c, msgSecret);
@@ -47,6 +49,49 @@ namespace SimServer.Net
             //ServerSocket.Send(c, msgTest);
         }
 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
         /// <summary>
         /// 处理注册信息
         /// </summary>
@@ -55,6 +100,7 @@ namespace SimServer.Net
         public static void MsgRegister(ClientSocket c, MsgBase msgBase) 
         {
             MsgRegister msg = (MsgRegister)msgBase;
+            Debug.Log("MsgHandler.MsgRegister  "+ msg.Account+"  "+msg.Password);
             var rst = UserManager.Instance.Register(msg.RegisterType, msg.Account, msg.Password, out string token);
             msg.Result = rst;
             ServerSocket.Send(c, msg);
@@ -71,7 +117,7 @@ namespace SimServer.Net
             var rst = UserManager.Instance.Login(msg.LoginType, msg.Account, msg.Password, out int userid, out string token);
             msg.Result = rst;
             msg.Token = token;
-            c.UserId = userid;
+            c.UserId = userid;//查表用到
             ServerSocket.Send(c, msg);
         }
     }

@@ -6,9 +6,9 @@ public enum ProtocolEnum
     MsgSecret = 1,
     /// <summary>心跳包的协议</summary>
     MsgPing = 2,
-    /// <summary></summary>
+    /// <summary>注册</summary>
     MsgRegister = 3,
-    /// <summary></summary>
+    /// <summary>登录</summary>
     MsgLogin = 4,
     /// <summary></summary>
     MsgTest = 9999,

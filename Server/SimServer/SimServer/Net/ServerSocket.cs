@@ -98,6 +98,7 @@ namespace SimServer.Net
                 try
                 {
                     //最后等待时间单位是微秒
+                    //多路复用的方式
                     Socket.Select(m_CheckReadList, null, null, 1000);
                 }
                 catch (Exception e)
@@ -121,11 +122,11 @@ namespace SimServer.Net
                 HeartbeatPackageOverTime();
             }
         }
-        /// <summary>启动服务器</summary>
-        void InitServer()
+        /// <summary>启动服务器,创建ServerSocket</summary>
+        void InitServer( )
         {
-            IPEndPoint ipEndPoint = GetIPEndPoint(m_IpStr, m_Port);
-            SetIPEndPoint(ipEndPoint, l_Port);
+            InitIPEndPoint(m_IpStr, m_Port, out IPEndPoint ipEndPoint);
+            InitServerSocket(ipEndPoint, l_Port);
             Debug.LogInfo("服务器启动监听{0}成功", m_ListenSocket.LocalEndPoint.ToString());
         }
         /// <summary>处理找出所有socket</summary>
@@ -253,16 +254,15 @@ namespace SimServer.Net
         }
 
         /// <summary>得到IP:端口</summary>
-        IPEndPoint GetIPEndPoint(string m_IpStr, int m_Port)
+        void InitIPEndPoint(string m_IpStr, int m_Port, out IPEndPoint ipEndPoint)
         {
             IPAddress ip = IPAddress.Parse(m_IpStr);
-            IPEndPoint ipEndPoint = new IPEndPoint(ip, m_Port);
+           ipEndPoint = new IPEndPoint(ip, m_Port);
 
-            return ipEndPoint;
         }
 
         /// <summary>设置IP:端口</summary>
-        void SetIPEndPoint(IPEndPoint ipEndPoint, int listenCount)
+        void InitServerSocket(IPEndPoint ipEndPoint, int listenCount)
         {
             m_ListenSocket = new Socket(AddressFamily.InterNetwork, SocketType.Stream, ProtocolType.Tcp);
             m_ListenSocket.Bind(ipEndPoint);
@@ -404,6 +404,7 @@ namespace SimServer.Net
             MsgBase msgBase = null;
             if (CanReadProtocolBody(clientSocket, proto, readbuff, bodyCount, out msgBase) == false)
                 return;
+            
             //
             readbuff.ReadIdx += bodyCount;
             readbuff.CheckAndMoveBytes();
