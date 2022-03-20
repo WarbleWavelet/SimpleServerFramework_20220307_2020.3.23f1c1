@@ -65,7 +65,7 @@ public class NetManager : Singleton<NetManager>
     /// <summary>是否链接成功过（只要链接成功过就是true，再也不会变成false）</summary>
     private bool m_IsConnectSuccessed = false;
     private bool m_ReConnect = false;
-
+    /// <summary>网络连接状况</summary>
     private NetworkReachability m_CurNetWork = NetworkReachability.NotReachable;
     #endregion
 
@@ -77,7 +77,7 @@ public class NetManager : Singleton<NetManager>
         m_CurNetWork = Application.internetReachability;
         while (true)
         {
-            yield return new WaitForSeconds(1);
+            yield return new WaitForSeconds(1);//每隔1s
             if (m_IsConnectSuccessed)
             {
                 if (m_CurNetWork != Application.internetReachability)
@@ -93,15 +93,9 @@ public class NetManager : Singleton<NetManager>
     public void Update()
     {
         Case_DroplineReConnect();
+        Case_ReConnectAndAutoLogin();
 
 
-        //断开链接后，链接服务器之后自动登录
-        if (!string.IsNullOrEmpty(SecretKey) && m_Socket.Connected && m_ReConnect)
-        {
-            LoginByToken();
-
-            m_ReConnect = false;
-        }
         MsgUpdate();
     }
 
@@ -709,6 +703,18 @@ public class NetManager : Singleton<NetManager>
 
             ReConnect();
             m_Dropline = false;
+        }
+    }
+    /// <summary>
+    /// 断开链接后，链接服务器之后自动登录
+    /// </summary>
+    void Case_ReConnectAndAutoLogin()
+    {
+        if (!string.IsNullOrEmpty(SecretKey) && m_Socket.Connected && m_ReConnect)
+        {
+            LoginByToken();
+
+            m_ReConnect = false;
         }
     }
     #endregion

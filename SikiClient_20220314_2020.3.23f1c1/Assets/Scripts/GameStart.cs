@@ -51,20 +51,8 @@ public class GameStart : MonoBehaviour
             }
         }
     }
-    private void Update_A()
-    {
 
-
-        if (Input.GetKeyDown(KeyCode.S))
-        {
-            Register();
-        }
-
-        if (Input.GetKeyDown(KeyCode.D))
-        {
-            Login();
-        }
-    }
+    
     /// <summary>
     /// 注册<para />
     /// 实际UI要先判断数据正确，才提交到服务器<para />
